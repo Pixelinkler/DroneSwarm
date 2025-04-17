@@ -1,3 +1,5 @@
+#Script handling csv execution
+
 from dronekit import connect, VehicleMode, LocationGlobalRelative
 import csv
 import time
