@@ -1,3 +1,5 @@
+#Script to test GPS working
+
 from dronekit import connect
 import time
 
