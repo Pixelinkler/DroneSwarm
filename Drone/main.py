@@ -156,7 +156,7 @@ def land():
         time.sleep(0.2)
   
 if __name__ == "__main__":
-    csv_filepath = "/home/pi/Drone_Swarm/Drone/Drone_1_complex.csv"
+    csv_filepath = "/home/pi/Drone_Swarm/Drone/Drone_1_complex.csv" #Change the path for each individual drone
     waypoints = read_waypoints(csv_filepath)
     DroneController(vehicle)
     # for t, point, vx, vy, vz in waypoints:
