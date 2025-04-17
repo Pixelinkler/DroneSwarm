@@ -1,3 +1,5 @@
+#Script to test if RC channel reading is coming
+
 class DroneController:
     def __init__(self, vehicle):
         self.vehicle = vehicle
