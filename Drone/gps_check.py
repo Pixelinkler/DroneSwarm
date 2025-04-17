@@ -6,9 +6,6 @@ import time
 # Connect to the vehicle (assumes SITL or MAVProxy running at this endpoint)
 vehicle = connect('127.0.0.1:14550', wait_ready=True)
 
-
-
-
 while True:
     while vehicle.gps_0.fix_type < 3:
         time.sleep(1)
