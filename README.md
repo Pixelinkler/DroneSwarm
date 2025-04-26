@@ -6,7 +6,7 @@ The system has two main components:
 - **GCS (Ground Control Station)**
 - **Drone Node (Raspberry Pi on each drone)**
 
-Each drone executes its mission from a CSV file, while the GCS monitors and manages the entire swarm.
+Each drone executes its mission from a CSV file, while the GCS monitors helps initiate mission start.
 
 ## Project Structure
 
@@ -48,7 +48,7 @@ DRONES = [
 ]
 ```
 
-Each dictionary contains:
+Each element contains:
 - `ip`: IP address of the drone’s Raspberry Pi
 - `user`: SSH username (default: `pi`)
 - `password`: SSH password
@@ -58,9 +58,9 @@ Each dictionary contains:
 
 ---
 
-## 2. Drone (Raspberry Pi Node)
+## 2. Drone (Raspberry Pi)
 
-- Script (`drone_main.py`) runs individually on each drone’s Raspberry Pi.
+- Script (`main.py`) runs individually on each drone’s Raspberry Pi.
 - Automatically initiated by GCS.
 - Reads a **mission.csv** containing waypoints and parameters.
 - Executes the mission autonomously.
