@@ -30,7 +30,7 @@ Each drone executes its mission from a CSV file, while the GCS monitors helps in
 - Communicates with all drones via MAVLink.
 - Sends commands, receives telemetry, and monitors status.
 - Designed to run on a **laptop/PC** with MAVLink (WiFi) communication setup.
-- Uploads CSV mission files from the `csv/` folder to each drone using **UDP** connection.
+- Uploads CSV mission files from the `csv/` folder to each drone using **SFTP**.
 
 ### Key Features
 - Connect to multiple drones simultaneously.
@@ -51,7 +51,7 @@ DRONES = [
 Each element contains:
 - `ip`: IP address of the drone’s Raspberry Pi
 - `user`: SSH username (default: `pi`)
-- `password`: SSH password
+- `password`: SSH password (default: `pi`)
 
 > **Note:**  
 > The list order determines the **drone numbering**, which affects **initial drone positioning** in missions.
@@ -90,7 +90,7 @@ Each drone independently follows its assigned CSV mission.
 > - Arm
 > - Land
 > - Position Hold
->
+
 > This allows immediate manual override for all drones during emergencies (e.g., crash, GPS glitch).
 
 ---
